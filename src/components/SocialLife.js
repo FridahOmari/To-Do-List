@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 function SocialLife() {
     const [socialTodos, set_social_todos] = useState([])
 
-
     useEffect(() => {
         fetch("http://localhost:9292/people")
         .then(res => res.json())
