@@ -1,6 +1,35 @@
 import React from 'react'
 
 function MindCare() {
+    const [mindTasks, setmindTasks] = useState([])
+
+
+    useEffect(() => {
+    
+        fetch("http://localhost:9292/mind-care")
+    
+        .then(res => res.json())
+        .then(data => {
+            setmindTasks(data)
+        })
+      },[])
+
+    function handleUpdateTask(updatedItem) {
+      const updatedItems = mindTasks.map((item) => {
+        if(item.id === updatedItem.id){
+          return updatedItem;
+        }
+        return item;
+      })
+      setmindTasks(updatedItems)
+    }
+
+    function handleDeletedTask(id){
+      const updatedItems = mindTasks.filter(item => item.id !== id)
+      setmindTasks(updatedItems)
+      console.log(updatedItems)
+    }
+
   return (
     <div>
         <div className="Container">
