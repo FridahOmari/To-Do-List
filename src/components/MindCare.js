@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Tasks from './Tasks';
+import { useState, useEffect } from 'react';
 
 function MindCare() {
     const [mindTasks, setmindTasks] = useState([])
@@ -12,7 +14,7 @@ function MindCare() {
         .then(data => {
             setmindTasks(data)
         })
-      },[])
+    },[])
 
     function handleUpdateTask(updatedItem) {
       const updatedItems = mindTasks.map((item) => {
