@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-function AddTaskForm() {
+function AddTaskForm({onAddTask}) {
     const[task, setTask] = useState("");
     const[category_id, setCategory_id] = useState("1");
 
