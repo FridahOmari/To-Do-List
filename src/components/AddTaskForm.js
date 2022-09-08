@@ -1,6 +1,29 @@
 import React from 'react'
+import { useState } from 'react';
 
 function AddTaskForm() {
+    const[task, setTask] = useState("");
+    const[category_id, setCategory_id] = useState("1");
+
+    function handleSubmit(e){
+        e.preventDefault()
+
+        fetch("http://localhost:9292/all-tasks", {
+
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                task: task,
+                category_id: parseInt(category_id),
+                isDone: false
+            })
+        })
+        .then(res => res.json())
+        .then (newTask => onAddTask(newTask))
+        setTask('')
+    }
   return (
     <div>
         <div className="Container">
