@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tasks(){
+function Tasks({item,  onUpdateTask, onDeleteTask}){
     const {task, category, isDone, id} = item
 
     function handleDoneStatus(){
