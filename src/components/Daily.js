@@ -36,9 +36,9 @@ function Daily(){
     return (
         <div >
             <div className="Container">
-                <h4></h4>
-                <h4></h4>
-                <h4></h4>
+                <h4>Morning jog at 5: 00 am</h4>
+                <h4>Departmental meeting with the team at 8:00 am</h4>
+                <h4>One hour meditation at 4:30 pm</h4>
             </div>
 
             <ul className="Items">{dailyTodos.map(item => <Tasks 

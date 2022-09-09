@@ -10,7 +10,7 @@ export default function NavBar() {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold">TASKLISTER</h2>
+                            <h2 className="text-2xl font-bold">JIPANGE APP</h2>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -78,12 +78,12 @@ export default function NavBar() {
                             </NavLink>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                            <NavLink to="/finances" >
+                            <NavLink to="/mind-care" >
                                 Mind-Care & Self-Growth
                             </NavLink>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                            <NavLink to="/finances" >
+                            <NavLink to="/social-life" >
                                 Social Life
                             </NavLink>
                             </li>

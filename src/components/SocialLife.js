@@ -32,9 +32,9 @@ function SocialLife() {
   return (
     <div>
         <div className="Container">
-            <h4></h4>
-            <h4></h4>
-            <h4></h4>
+            <h4>Coffee with Sheila on Sunday afternoon</h4>
+            <h4>Zoom meeting with family on Thursday evening</h4>
+            <h4>Wednesday youth fellowship</h4>
         </div>
         <ul className="Items">{socialTodos.map(item => <Tasks 
         key={item.id}

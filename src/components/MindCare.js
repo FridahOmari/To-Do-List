@@ -35,9 +35,9 @@ function MindCare() {
   return (
     <div>
         <div className="Container">
-            <h4></h4>
-            <h4></h4> 
-            <h4></h4>
+            <h4>Weekly meditation on Sunday</h4>
+            <h4>Weekly Motivational book </h4> 
+            <h4>Monthly coastal trip</h4>
         </div>
         <ul className="Items">{mindTasks.map(item => <Tasks 
         key={item.id}
