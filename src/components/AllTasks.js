@@ -1,8 +1,9 @@
-import React from 'react'
-import Tasks from './Tasks';
-import { useState, useEffect } from 'react';
+import Tasks from "./Tasks";
+import React, {useState, useEffect} from "react";
 
-function AllTasks() {
+
+function AllTasks(){
+
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
@@ -14,34 +15,37 @@ function AllTasks() {
         setTodos(data)
       })
     },[])
-
-    function handleUpdateTask(updatedItem) {
-        const updatedItems = todos.map((item) => {
-          if(item.id === updatedItem.id){
-            return updatedItem;
-          }
-          return item;
-        })
-        setTodos(updatedItems)
-    }
+  
     
-      
+    
+    function handleUpdateTask(updatedItem) {
+      const updatedItems = todos.map((item) => {
+        if(item.id === updatedItem.id){
+          return updatedItem;
+        }
+        return item;
+      })
+      setTodos(updatedItems)
+    }
+  
+    
     function handleDeletedTask(id){
       const updatedItems = todos.filter(item => item.id !== id)
       setTodos(updatedItems)
       console.log(updatedItems)
     }
-  return (
-    <div className="Container">
-        <h4><em>ALL</em> Your Tasks, reminders, routines and goals will be displayed Here: </h4>
-        <ul className="Items">{todos.map(item => <Tasks 
-        key={item.id}
-        onUpdateTask={handleUpdateTask}
-        onDeleteTask={handleDeletedTask}
-        sitem={item}/>)}
-        </ul>
-    </div>
-  )
+
+    return(
+        <div className="Container">
+            <h4><em>ALL</em> Your Tasks, reminders, routines and goals will be displayed Here: </h4>
+            <ul className="Items">{todos.map(item => <Tasks 
+            key={item.id}
+            onUpdateTask={handleUpdateTask}
+            onDeleteTask={handleDeletedTask}
+            item={item}/>)}
+            </ul>
+        </div>
+    )
 }
 
 export default AllTasks;

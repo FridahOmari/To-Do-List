@@ -1,7 +1,8 @@
 import React from "react";
 
-function Tasks({item,  onUpdateTask, onDeleteTask}){
-    const {task, category, isDone, id} = item
+function Tasks ({item,  onUpdateTask, onDeleteTask}){
+
+  const {task, category, isDone, id} = item
 
     function handleDoneStatus(){
 
@@ -31,8 +32,7 @@ function Tasks({item,  onUpdateTask, onDeleteTask}){
     }
 
     return(
-        <div>
-            <li className={isDone ? "isDone" : ""}>
+        <li className={isDone ? "isDone" : ""}>
             <span>{task}</span>
             <span className="category">{category}</span>
             <button className={isDone  ? "remove" : "add"}
@@ -41,8 +41,7 @@ function Tasks({item,  onUpdateTask, onDeleteTask}){
             </button>
             <button className="remove" onClick={handleDeleteClick}>Delete Task</button>
         </li>
-        </div>
     )
 }
 
-export default Tasks;
+export default Tasks
