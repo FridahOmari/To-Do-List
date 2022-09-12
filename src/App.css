@@ -5,15 +5,18 @@
   --yellow: rgb(237, 237, 32);
   --font-color: rgb(33, 33, 33);
   --font-color-light: rgb(155, 155, 155);
-  /* --background: aqua;  */
-  --background: orange; 
+  /* --background: aqua;  */ 
   --background-light: rgb(230, 230, 230);
 }
 
 body {
-  background: rgb(231, 231, 231);
+  background: #ddd;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 button,
