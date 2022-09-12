@@ -10,7 +10,7 @@ function Finances () {
 
     useEffect(() => {
     
-        fetch("http://localhost:9292/finances")
+        fetch("https://jipange-backend.herokuapp.com/finances")
     
         .then(res => res.json())
         .then(data => {

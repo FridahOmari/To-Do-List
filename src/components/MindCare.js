@@ -9,7 +9,7 @@ function MindCare (){
 
     useEffect(() => {
     
-        fetch("http://localhost:9292/mind-care")
+        fetch("https://jipange-backend.herokuapp.com/mind-care")
     
         .then(res => res.json())
         .then(data => {

@@ -10,7 +10,7 @@ function Daily(){
 
     useEffect(() => {
     
-        fetch("http://localhost:9292/daily")
+        fetch("https://jipange-backend.herokuapp.com/daily")
     
         .then(res => res.json())
         .then(data => {

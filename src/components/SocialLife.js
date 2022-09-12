@@ -10,7 +10,7 @@ function SocialLife(){
 
     useEffect(() => {
     
-        fetch("http://localhost:9292/people")
+        fetch("https://jipange-backend.herokuapp.com/people")
     
         .then(res => res.json())
         .then(data => {

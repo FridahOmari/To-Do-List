@@ -8,7 +8,7 @@ function AllTasks(){
 
     useEffect(() => {
    
-      fetch("http://localhost:9292/all-tasks")
+      fetch("https://jipange-backend.herokuapp.com/all-tasks")
   
       .then(res => res.json())
       .then(data => {

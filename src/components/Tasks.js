@@ -6,7 +6,7 @@ function Tasks ({item,  onUpdateTask, onDeleteTask}){
 
     function handleDoneStatus(){
 
-        fetch(`http://localhost:9292/all-tasks/${id}`, {
+        fetch(`https://jipange-backend.herokuapp.com/all-tasks/${id}`, {
 
 
             method: "PATCH",

@@ -8,7 +8,7 @@ function AddTaskForm({onAddTask}){
     function handleSubmit(e){
         e.preventDefault()
 
-        fetch("http://localhost:9292/all-tasks", {
+        fetch("https://jipange-backend.herokuapp.com/all-tasks", {
 
             method: "POST",
             headers: {
